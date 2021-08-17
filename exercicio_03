@@ -1,0 +1,7 @@
+
+3. Faça um Programa que peça dois números e imprima a soma.
+
+x = input("digite um número: ")
+y = input("digite um segundo número: ")
+z = int(x)+int(y)
+print("a soma de " + x + " com " + y + " é igual a: " + str(z))
