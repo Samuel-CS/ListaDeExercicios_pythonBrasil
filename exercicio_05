@@ -1,0 +1,7 @@
+
+5. Faça um Programa que converta metros para centímetros.
+
+metro = input("conversor de metro para centimetros: ")
+metroCoverter = int(metro) * 100
+
+print(f"{metro}metros é igual a {metroCoverter}centimetros")
