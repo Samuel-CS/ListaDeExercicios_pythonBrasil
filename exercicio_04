@@ -1,0 +1,10 @@
+
+4. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+
+x = input("digite a primeira nota: ")
+y = input("digite a segunda nota: ")
+w = input("digite a terceira nota: ")
+z = input("digite a quarta nota: ")
+k = (int(x) + int(y) + int(w) + int(z)) / 4
+
+print(f"A média final é: {k}")
