@@ -1,0 +1,18 @@
+#18. Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
+# calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+
+arquiveSize_01 = int(input("Qual o tamanho do arquivo(em MB)? "))
+velNet_01 = int(input("Qual a velocidade da sua internet(em Mbps)? "))
+downTime_01 = (velNet_01 * 0.125) # converte a velocidade de bits para byte
+downTime_02 = (downTime_01 * 60) # calcula quantos bytes serão baixados em 60 segundos
+downTime_03 = (arquiveSize_01 * 60 / downTime_02)  # calcula quantos minutos(segundos) vai demorar pra baixar um arquivo
+downTime_04 = ((arquiveSize_01 * 60) / downTime_02) # calcula quantos segundos vai demorar para baixar um arquivo
+downTime_05 = (int(downTime_03 / 60))  # calcula quantos minutos que vai demorar pra baixar um arquivo
+downTime_06 = int((downTime_03 % 60)) # calcula segundos
+
+if downTime_03 >= 60:
+    print(f"bit pra byte: {downTime_01}, megabyte baixados em 60 segundos: {downTime_02}, {int(downTime_03)} segundos necessários, ou {downTime_05}min e {downTime_06}seg")
+elif downTime_03 < 60:
+    print(f"bit pra byte: {downTime_01}, megabyte baixados em 60 segundos: {downTime_02},  {int(downTime_04)} segundos")
+
+
