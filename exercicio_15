@@ -1,0 +1,28 @@
+#15. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+#salário bruto.
+#quanto pagou ao INSS.
+#quanto pagou ao sindicato.
+#o salário líquido.
+#calcule os descontos e o salário líquido, conforme a tabela abaixo:
+#+ Salário Bruto : R$
+#- IR (11%) : R$
+#- INSS (8%) : R$
+#- Sindicato ( 5%) : R$
+#= Salário Liquido : R$
+#Obs.: Salário Bruto - Descontos = Salário Líquido.
+
+hourLabour = int(input("Quantas horas você trabalhou essa semana? "))
+hourLabour_pay = int(input("Quanto você ganha por hora? "))
+grossSalary = hourLabour * hourLabour_pay
+grossSalary_irTax = round((grossSalary * 11) / 100 , 2)
+grossSalary_inssTax = round((grossSalary * 8) / 100 , 2)
+grossSalary_sindicateTax = round((grossSalary * 5) / 100 , 2)
+totalTax = round(grossSalary_irTax + grossSalary_inssTax + grossSalary_sindicateTax , 2)
+netPay = grossSalary - totalTax
+
+print("O seu salário bruto é de R$" + str(grossSalary))
+print("O valor descontado de 11% para o imposto de renda é de R$" + str(grossSalary_irTax))
+print("O valor descontado de 8% para o INSS é de R$" + str(grossSalary_inssTax))
+print("O valor descontado de 5% para o sindicato é de R$" + str(grossSalary_sindicateTax))
+print("O total de taxas pago é de R$" + str(totalTax))
+print("O seu salário líquido é de R$" + str(netPay))
