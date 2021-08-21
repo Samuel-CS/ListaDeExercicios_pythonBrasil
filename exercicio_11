@@ -1,0 +1,15 @@
+#11. Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+# o produto do dobro do primeiro com metade do segundo .
+# a soma do triplo do primeiro com o terceiro.
+# o terceiro elevado ao cubo.
+
+number_01 = int(input("digite um número:"))
+number_02 = int(input("digite outro número: "))
+number_03 = float(input("digite um número real: "))
+calcNumber_01 = ((number_01 * 2) + (number_02 / 2))
+calcNumber_02 = ((number_01 * 3) + number_03)
+calcNumber_03 = pow(number_03, 3)
+
+print("o produto do dobro do primeiro com metade do segundo é: " + str(calcNumber_01))
+print("a soma do triplo do primeiro com o terceiro é: " + str(calcNumber_02))
+print("o terceiro elevado ao cubo é: " + str(calcNumber_03))
